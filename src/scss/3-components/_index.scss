@@ -1,0 +1,26 @@
+.id_hisharp {
+    font-size: 30px;
+}
+
+.id_ltd {
+    font-size: 10px;
+    display: block;
+}
+
+.id_title {
+    font-size: 24px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.id_sidebar_item {
+    padding-left: 10px;
+}
+
+.id_sidebar_link {
+    border-bottom: 1px solid #ffffff;
+}
+
+.sidebar-item.active > .sidebar-link, .sidebar-item.active .sidebar-link:hover{
+    border-left-color: transparent;
+}
