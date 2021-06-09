@@ -60,7 +60,8 @@
 @import "3-components/tables";
 @import "3-components/type";
 @import "3-components/wrapper";
-@import "3-components/index";
+@import "3-components/index"; // 新增
+@import "3-components/all"; // 新增
 // Theme utilities
 @import "4-utilities/background";
 @import "4-utilities/cursors";
