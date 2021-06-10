@@ -17,6 +17,69 @@
 
     <link href="css/app.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+
+    <style>
+        .id_slider {
+            padding: 10px 0;
+            background: #ffffff;
+            box-shadow: 0px 3px 6px #00000033;
+            margin-bottom: 10px;
+        }
+
+        .id_slider .slick-prev {
+            left: 10px;
+            z-index: 1;
+            background: url("img/icons/sider_arrow_l.svg") no-repeat center center;
+            width: 30px;
+            height: 100%;
+        }
+
+        .id_slider .slick-prev::before {
+            content: "";
+            opacity: 1;
+        }
+
+        .id_slider .slick-prev:hover {
+            opacity: 1;
+            background: url("img/icons/sider_arrow_l.svg") no-repeat center center;
+        }
+
+        .id_slider .slick-prev:focus {
+            opacity: 1;
+            background: url("img/icons/sider_arrow_l.svg") no-repeat center center;
+        }
+
+        .id_slider .slick-next {
+            right: 10px;
+            z-index: 1;
+            background: url("img/icons/sider_arrow_r.svg") no-repeat center center;
+            width: 30px;
+            height: 100%;
+        }
+
+        .id_slider .slick-next::before {
+            content: "";
+            opacity: 1;
+        }
+
+        .id_slider .slick-next:hover {
+            opacity: 1;
+            background: url("img/icons/sider_arrow_r.svg") no-repeat center center;
+        }
+
+        .id_slider .slick-next:focus {
+            opacity: 1;
+            background: url("img/icons/sider_arrow_r.svg") no-repeat center center;
+        }
+
+        .id_slider_link {
+            cursor: default;
+            text-decoration: none !important;
+            padding: 0 10px;
+        }
+    </style>
 </head>
 
 <body>
@@ -332,7 +395,7 @@
             <main class="id_content">
                 <div class="container-fluid p-0">
                     <div class="row">
-                        <div class="col-xl-4">
+                        <div class="col-sm-4">
                             <!-- video -->
                             <div class="id_video_area">
                                 <div class="all_video id_video">
@@ -346,351 +409,187 @@
                             </div>
                             <!-- end video -->
 
-                            <!-- list -->
+                            <!-- table -->
                             <div class="id_table_area">
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">名稱</th>
-                                            <th scope="col">IP位置</th>
-                                            <th scope="col">IP位置</th>
-                                            <th scope="col">連線狀態</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row">IPCAM001</th>
-                                            <td>192.168.0.1</td>
-                                            <td>HD Webcam C525 #3 (046d:0826)</td>
-                                            <td>icons</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <p class="all_table_title">
+                                    <img src="img/icons/area_header_icon.svg" alt="">
+                                    <span>預設區域1 - 設備列表</span>
+                                </p>
+
+                                <div class="id_table_box table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">名稱</th>
+                                                <th scope="col">IP位置</th>
+                                                <th scope="col">IP位置</th>
+                                                <th scope="col">連線狀態</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>IPCAM001</td>
+                                                <td>192.168.0.1</td>
+                                                <td>HD Webcam C525 #3 (046d:0826)</td>
+                                                <td><img src="img/icons/check.svg" alt=""></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- end table -->
+
+                            <!-- list -->
+                            <div class="id_list_area">
+                                <p class="all_table_title">
+                                    <img src="img/icons/area_header_icon.svg" alt="">
+                                    <span>吿警紀錄</span>
+                                </p>
+
+                                <div class="id_list_box">
+                                    <ul class="id_list_ul">
+                                        <li>
+                                            <span>預設區域1 IPCAM004 無影像訊號連結</span>
+                                            <span>2020/12/12/00:00</span>
+                                        </li>
+                                    </ul>
+
+                                    <a href="" title="" class="id_list_btn">清除紀錄</a>
+                                </div>
                             </div>
                             <!-- end list -->
                         </div>
-                        <div class="col-xl-8"></div>
-                    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                    <div class="row">
-                        <div class="col-xl-6 col-xxl-5 d-flex">
-                            <div class="w-100">
-                                <div class="row">
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-6 col-xxl-7">
-                            <div class="card flex-fill w-100">
-                                <div class="card-header">
-
-                                    <h5 class="card-title mb-0">Recent Movement</h5>
-                                </div>
-                                <div class="card-body py-3">
-                                    <div class="chart chart-sm">
-                                        <canvas id="chartjs-dashboard-line"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-12 col-md-6 col-xxl-3 d-flex order-2 order-xxl-3">
-                            <div class="card flex-fill w-100">
-                                <div class="card-header">
-
-                                    <h5 class="card-title mb-0">Browser Usage</h5>
-                                </div>
-                                <div class="card-body d-flex">
-                                    <div class="align-self-center w-100">
-                                        <div class="py-3">
-                                            <div class="chart chart-xs">
-                                                <canvas id="chartjs-dashboard-pie"></canvas>
-                                            </div>
+                        <div class="col-sm-8">
+                            <!-- slider -->
+                            <div class="id_slider js_slider">
+                                <a href="javascript:;" title="" class="id_slider_link">
+                                    <div class="all_video id_video">
+                                        <div class="all_video_box">
+                                            <img src="img/icons/video.svg" alt="" class="all_slider_img">
+                                            <p class="all_video_txt1">Could not connect to camera</p>
+                                            <p class="all_video_txt2">PLZ ADD A CAMERA</p>
                                         </div>
-
-                                        <table class="table mb-0">
-                                            <tbody>
-                                                <tr>
-                                                    <td>Chrome</td>
-                                                    <td class="text-end">4306</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Firefox</td>
-                                                    <td class="text-end">3801</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>IE</td>
-                                                    <td class="text-end">1689</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
                                     </div>
-                                </div>
+                                </a>
+                                <a href="javascript:;" title="" class="id_slider_link">
+                                    <div class="all_video id_video">
+                                        <div class="all_video_box">
+                                            <img src="img/icons/video.svg" alt="" class="all_slider_img">
+                                            <p class="all_video_txt1">Could not connect to camera</p>
+                                            <p class="all_video_txt2">PLZ ADD A CAMERA</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="javascript:;" title="" class="id_slider_link">
+                                    <div class="all_video id_video">
+                                        <div class="all_video_box">
+                                            <img src="img/icons/video.svg" alt="" class="all_slider_img">
+                                            <p class="all_video_txt1">Could not connect to camera</p>
+                                            <p class="all_video_txt2">PLZ ADD A CAMERA</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="javascript:;" title="" class="id_slider_link">
+                                    <div class="all_video id_video">
+                                        <div class="all_video_box">
+                                            <img src="img/icons/video.svg" alt="" class="all_slider_img">
+                                            <p class="all_video_txt1">Could not connect to camera</p>
+                                            <p class="all_video_txt2">PLZ ADD A CAMERA</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="javascript:;" title="" class="id_slider_link">
+                                    <div class="all_video id_video">
+                                        <div class="all_video_box">
+                                            <img src="img/icons/video.svg" alt="" class="all_slider_img">
+                                            <p class="all_video_txt1">Could not connect to camera</p>
+                                            <p class="all_video_txt2">PLZ ADD A CAMERA</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="javascript:;" title="" class="id_slider_link">
+                                    <div class="all_video id_video">
+                                        <div class="all_video_box">
+                                            <img src="img/icons/video.svg" alt="" class="all_slider_img">
+                                            <p class="all_video_txt1">Could not connect to camera</p>
+                                            <p class="all_video_txt2">PLZ ADD A CAMERA</p>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
+                            <!-- end slider -->
+
+                            <div class="col-sm-6 id_data_area">
+                                <!-- data -->
+                                <div class="col-sm-6 id_data_box">
+                                    <p class="id_data_title">設備總數</p>
+                                    <p class="id_data_num">4</p>
+                                </div>
+                                <div class="col-sm-6 id_data_box">
+                                    <p class="id_data_title">異常設備</p>
+                                    <p class="id_data_num">1</p>
+                                </div>
+                                <div class="col-sm-6 id_data_box">
+                                    <p class="id_data_title">設備總數</p>
+                                    <p class="id_data_num">3</p>
+                                </div>
+                                <div class="col-sm-6 id_data_box">
+                                    <p class="id_data_title">離線設備</p>
+                                    <p class="id_data_num">1</p>
+                                </div>
+                                <!-- end data -->
+                                <div class="col-sm-6"></div>
+                            </div>
+                            <div class="col-sm-6"></div>
+
                         </div>
                     </div>
-
-                    <div class="row">
-                        <div class="col-12 col-lg-8 col-xxl-9 d-flex">
-                            <div class="card flex-fill">
-                                <div class="card-header">
-
-                                    <h5 class="card-title mb-0">Latest Projects</h5>
-                                </div>
-                                <table class="table table-hover my-0">
-                                    <thead>
-                                        <tr>
-                                            <th>Name</th>
-                                            <th class="d-none d-xl-table-cell">Start Date</th>
-                                            <th class="d-none d-xl-table-cell">End Date</th>
-                                            <th>Status</th>
-                                            <th class="d-none d-md-table-cell">Assignee</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Project Apollo</td>
-                                            <td class="d-none d-xl-table-cell">01/01/2021</td>
-                                            <td class="d-none d-xl-table-cell">31/06/2021</td>
-                                            <td><span class="badge bg-success">Done</span></td>
-                                            <td class="d-none d-md-table-cell">Vanessa Tucker</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Project Fireball</td>
-                                            <td class="d-none d-xl-table-cell">01/01/2021</td>
-                                            <td class="d-none d-xl-table-cell">31/06/2021</td>
-                                            <td><span class="badge bg-danger">Cancelled</span></td>
-                                            <td class="d-none d-md-table-cell">William Harris</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Project Hades</td>
-                                            <td class="d-none d-xl-table-cell">01/01/2021</td>
-                                            <td class="d-none d-xl-table-cell">31/06/2021</td>
-                                            <td><span class="badge bg-success">Done</span></td>
-                                            <td class="d-none d-md-table-cell">Sharon Lessman</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Project Nitro</td>
-                                            <td class="d-none d-xl-table-cell">01/01/2021</td>
-                                            <td class="d-none d-xl-table-cell">31/06/2021</td>
-                                            <td><span class="badge bg-warning">In progress</span></td>
-                                            <td class="d-none d-md-table-cell">Vanessa Tucker</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Project Phoenix</td>
-                                            <td class="d-none d-xl-table-cell">01/01/2021</td>
-                                            <td class="d-none d-xl-table-cell">31/06/2021</td>
-                                            <td><span class="badge bg-success">Done</span></td>
-                                            <td class="d-none d-md-table-cell">William Harris</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Project X</td>
-                                            <td class="d-none d-xl-table-cell">01/01/2021</td>
-                                            <td class="d-none d-xl-table-cell">31/06/2021</td>
-                                            <td><span class="badge bg-success">Done</span></td>
-                                            <td class="d-none d-md-table-cell">Sharon Lessman</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Project Romeo</td>
-                                            <td class="d-none d-xl-table-cell">01/01/2021</td>
-                                            <td class="d-none d-xl-table-cell">31/06/2021</td>
-                                            <td><span class="badge bg-success">Done</span></td>
-                                            <td class="d-none d-md-table-cell">Christina Mason</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Project Wombat</td>
-                                            <td class="d-none d-xl-table-cell">01/01/2021</td>
-                                            <td class="d-none d-xl-table-cell">31/06/2021</td>
-                                            <td><span class="badge bg-warning">In progress</span></td>
-                                            <td class="d-none d-md-table-cell">William Harris</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-4 col-xxl-3 d-flex">
-                            <div class="card flex-fill w-100">
-                                <div class="card-header">
-
-                                    <h5 class="card-title mb-0">Monthly Sales</h5>
-                                </div>
-                                <div class="card-body d-flex w-100">
-                                    <div class="align-self-center chart chart-lg">
-                                        <canvas id="chartjs-dashboard-bar"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </main>
-
         </div>
     </div>
 
-    
+
     <script src="js/app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var ctx = document.getElementById("chartjs-dashboard-line").getContext("2d");
-            var gradient = ctx.createLinearGradient(0, 0, 0, 225);
-            gradient.addColorStop(0, "rgba(215, 227, 244, 1)");
-            gradient.addColorStop(1, "rgba(215, 227, 244, 0)");
-            // Line chart
-            new Chart(document.getElementById("chartjs-dashboard-line"), {
-                type: "line",
-                data: {
-                    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-                    datasets: [{
-                        label: "Sales ($)",
-                        fill: true,
-                        backgroundColor: gradient,
-                        borderColor: window.theme.primary,
-                        data: [
-                            2115,
-                            1562,
-                            1584,
-                            1892,
-                            1587,
-                            1923,
-                            2566,
-                            2448,
-                            2805,
-                            3438,
-                            2917,
-                            3327
-                        ]
-                    }]
+        $('.js_slider').slick({
+            dots: false,
+            arrows: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: false
+                    }
                 },
-                options: {
-                    maintainAspectRatio: false,
-                    legend: {
-                        display: false
-                    },
-                    tooltips: {
-                        intersect: false
-                    },
-                    hover: {
-                        intersect: true
-                    },
-                    plugins: {
-                        filler: {
-                            propagate: false
-                        }
-                    },
-                    scales: {
-                        xAxes: [{
-                            reverse: true,
-                            gridLines: {
-                                color: "rgba(0,0,0,0.0)"
-                            }
-                        }],
-                        yAxes: [{
-                            ticks: {
-                                stepSize: 1000
-                            },
-                            display: true,
-                            borderDash: [3, 3],
-                            gridLines: {
-                                color: "rgba(0,0,0,0.0)"
-                            }
-                        }]
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
                     }
                 }
-            });
+            ]
         });
     </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Pie chart
-            new Chart(document.getElementById("chartjs-dashboard-pie"), {
-                type: "pie",
-                data: {
-                    labels: ["Chrome", "Firefox", "IE"],
-                    datasets: [{
-                        data: [4306, 3801, 1689],
-                        backgroundColor: [
-                            window.theme.primary,
-                            window.theme.warning,
-                            window.theme.danger
-                        ],
-                        borderWidth: 5
-                    }]
-                },
-                options: {
-                    responsive: !window.MSInputMethodContext,
-                    maintainAspectRatio: false,
-                    legend: {
-                        display: false
-                    },
-                    cutoutPercentage: 75
-                }
-            });
-        });
-    </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Bar chart
-            new Chart(document.getElementById("chartjs-dashboard-bar"), {
-                type: "bar",
-                data: {
-                    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-                    datasets: [{
-                        label: "This year",
-                        backgroundColor: window.theme.primary,
-                        borderColor: window.theme.primary,
-                        hoverBackgroundColor: window.theme.primary,
-                        hoverBorderColor: window.theme.primary,
-                        data: [54, 67, 41, 55, 62, 45, 55, 73, 60, 76, 48, 79],
-                        barPercentage: .75,
-                        categoryPercentage: .5
-                    }]
-                },
-                options: {
-                    maintainAspectRatio: false,
-                    legend: {
-                        display: false
-                    },
-                    scales: {
-                        yAxes: [{
-                            gridLines: {
-                                display: false
-                            },
-                            stacked: false,
-                            ticks: {
-                                stepSize: 20
-                            }
-                        }],
-                        xAxes: [{
-                            stacked: false,
-                            gridLines: {
-                                color: "transparent"
-                            }
-                        }]
-                    }
-                }
-            });
-        });
-    </script>
+
 
 </body>
 

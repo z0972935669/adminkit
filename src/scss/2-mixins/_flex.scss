@@ -1,0 +1,63 @@
+@mixin flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@mixin flex-start {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+@mixin flex-center-start {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+@mixin flex-center-end {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+@mixin flex-start-average {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+@mixin flex-end {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+@mixin flex-end-average {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+@mixin flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-average {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin flex-row-average {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
