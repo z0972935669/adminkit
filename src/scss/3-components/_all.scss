@@ -42,3 +42,8 @@ li {
     padding: 5px 10px;
     @include flex-center-start;
 }
+
+.all_chart_area {
+    background: #333340;
+    border-radius: 12px;
+}

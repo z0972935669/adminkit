@@ -158,3 +158,15 @@
         font-size: 39px;
     }
 }
+
+.id_chart_area{
+    margin-bottom: 10px;
+}
+
+.id_chart_box{
+    width: calc(100% / 3 - 7px);
+    margin-right: 10px;
+    &:last-child {
+        margin-right: 0;
+    }
+}

@@ -519,29 +519,49 @@
                             </div>
                             <!-- end slider -->
 
-                            <div class="col-sm-6 id_data_area">
-                                <!-- data -->
-                                <div class="col-sm-6 id_data_box">
-                                    <p class="id_data_title">設備總數</p>
-                                    <p class="id_data_num">4</p>
+                            <!-- 區塊1 -->
+                            <div class="col-sm-12 d-flex id_chart_area">
+                                <div class="col-sm-6 id_data_area">
+                                    <!-- data -->
+                                    <div class="col-sm-6 id_data_box">
+                                        <p class="id_data_title">設備總數</p>
+                                        <p class="id_data_num">4</p>
+                                    </div>
+                                    <div class="col-sm-6 id_data_box">
+                                        <p class="id_data_title">異常設備</p>
+                                        <p class="id_data_num">1</p>
+                                    </div>
+                                    <div class="col-sm-6 id_data_box">
+                                        <p class="id_data_title">設備總數</p>
+                                        <p class="id_data_num">3</p>
+                                    </div>
+                                    <div class="col-sm-6 id_data_box">
+                                        <p class="id_data_title">離線設備</p>
+                                        <p class="id_data_num">1</p>
+                                    </div>
+                                    <!-- end data -->
                                 </div>
-                                <div class="col-sm-6 id_data_box">
-                                    <p class="id_data_title">異常設備</p>
-                                    <p class="id_data_num">1</p>
+                                <div class="col-sm-6 all_chart_area">
+                                    <div class="card-body d-flex w-100">
+                                        <div class="align-self-center chart chart-lg">
+                                            <canvas id="chartjs-dashboard-bar"></canvas>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-sm-6 id_data_box">
-                                    <p class="id_data_title">設備總數</p>
-                                    <p class="id_data_num">3</p>
-                                </div>
-                                <div class="col-sm-6 id_data_box">
-                                    <p class="id_data_title">離線設備</p>
-                                    <p class="id_data_num">1</p>
-                                </div>
-                                <!-- end data -->
-                                <div class="col-sm-6"></div>
                             </div>
-                            <div class="col-sm-6"></div>
+                            <!-- end 區塊1 -->
 
+                            <div class="col-sm-12 d-flex">
+                                <div class="col-sm-4 all_chart_area id_chart_box">
+                                    <canvas id="js_myChart1"></canvas>
+                                </div>
+                                <div class="col-sm-4 all_chart_area id_chart_box">
+                                    <canvas id="js_myChart2"></canvas>
+                                </div>
+                                <div class="col-sm-4 all_chart_area id_chart_box">
+                                    <canvas id="js_myChart3"></canvas>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -587,6 +607,111 @@
                     }
                 }
             ]
+        });
+
+        // 圖表1
+        document.addEventListener("DOMContentLoaded", function () {
+            // Bar chart
+            new Chart(document.getElementById("chartjs-dashboard-bar"), {
+                type: "bar",
+                data: {
+                    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                    datasets: [{
+                        label: "This year",
+                        backgroundColor: window.theme.primary,
+                        borderColor: window.theme.primary,
+                        hoverBackgroundColor: window.theme.primary,
+                        hoverBorderColor: window.theme.primary,
+                        data: [54, 67, 41, 55, 62, 45, 55, 73, 60, 76, 48, 79],
+                        barPercentage: .75,
+                        categoryPercentage: .5
+                    }]
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    legend: {
+                        display: false
+                    },
+                    scales: {
+                        yAxes: [{
+                            gridLines: {
+                                display: false
+                            },
+                            stacked: false,
+                            ticks: {
+                                stepSize: 20
+                            }
+                        }],
+                        xAxes: [{
+                            stacked: false,
+                            gridLines: {
+                                color: "transparent"
+                            }
+                        }]
+                    }
+                }
+            });
+        });
+
+        // 圖表2
+        var ctx2 = document.getElementById("js_myChart1").getContext('2d');
+        var myChart = new Chart(ctx2, {
+            type: 'bar',
+            data: {
+                labels: ["M", "T", "W", "T", "F", "S", "S"],
+                datasets: [{
+                    label: 'apples',
+                    data: [12, 19, 3, 17, 28, 24, 7],
+                    backgroundColor: "rgba(153,255,51,1)"
+                }, {
+                    label: 'oranges',
+                    data: [30, 29, 5, 5, 20, 3, 10],
+                    backgroundColor: "rgba(255,153,0,1)"
+                }]
+            }
+        });
+
+        // 圖表3
+        var ctx3 = document.getElementById("js_myChart2").getContext('2d');
+        var myChart = new Chart(ctx3, {
+            type: 'pie',
+            data: {
+                labels: ["M", "T", "W", "T", "F", "S", "S"],
+                datasets: [{
+                    backgroundColor: [
+                        "#2ecc71",
+                        "#3498db",
+                        "#95a5a6",
+                        "#9b59b6",
+                        "#f1c40f",
+                        "#e74c3c",
+                        "#34495e"
+                    ],
+                    data: [12, 19, 3, 17, 28, 24, 7]
+                }]
+            }
+        });
+
+        // 圖表4
+        var ctx4 = document.getElementById("js_myChart3").getContext('2d');
+
+        var myChart = new Chart(ctx4, {
+            type: 'line',
+            data: {
+                labels: ["Tokyo", "Mumbai", "Mexico City", "Shanghai", "Sao Paulo", "New York", "Karachi", "Buenos Aires", "Delhi", "Moscow"],
+                datasets: [{
+                    label: 'Series 1', // Name the series
+                    data: [500, 50, 2424, 14040, 14141, 4111, 4544, 47, 5555, 6811], // Specify the data values array
+                    fill: false,
+                    borderColor: '#2196f3', // Add custom color border (Line)
+                    backgroundColor: '#2196f3', // Add custom color background (Points and Fill)
+                    borderWidth: 1 // Specify bar border width
+                }]
+            },
+            options: {
+                responsive: true, // Instruct chart js to respond nicely.
+                maintainAspectRatio: false, // Add to prevent default behaviour of full-width/height 
+            }
         });
     </script>
 
