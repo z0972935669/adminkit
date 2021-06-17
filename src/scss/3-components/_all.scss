@@ -12,8 +12,8 @@ li {
 
 .all_video_box {
     width: 100%;
-    height: 150px;
     text-align: center;
+    padding: 10px 0;
 }
 
 .all_slider_img {
@@ -46,4 +46,15 @@ li {
 .all_chart_area {
     background: #333340;
     border-radius: 12px;
+    padding: 10px;
+}
+
+.all_nav_items {
+    width: 58px;
+    height: 58px;
+    background: #1b223a;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 2px solid #1b223a;
+    border-radius: 99em;
+    @include flex;
 }

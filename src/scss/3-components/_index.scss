@@ -30,6 +30,31 @@
     box-shadow: 0px 3px 6px #00000029;
 }
 
+.id_nav_area {
+    li {
+        padding: 0 10px;
+    }
+}
+
+.id_nav_ul {
+    width: 350px;
+    padding: 0 10px 20px;
+    li {
+        font-size: 12px;
+        color: #71092d;
+        border-bottom: 1px solid #852c4b;
+        padding: 5px 10px;
+        @include flex-average;
+    }
+    .id_nav_content {
+        width: calc(100% - 105px - 20px);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        display: block;
+    }
+}
+
 .id_box {
     padding: 15px 20px 25px;
     .id_list {
@@ -69,7 +94,6 @@
 }
 
 .id_video_area {
-    max-width: 510px;
     background: #ffffff;
     box-shadow: 0px 3px 6px #00000033;
     padding: 15px 20px;
@@ -83,13 +107,30 @@
         color: #ffffff;
         font-size: 20px;
     }
+    .id_video_btnbox {
+        margin-top: 20px;
+        @include flex-center-end;
+    }
+    .id_video_btn {
+        width: 197px;
+        height: 42px;
+        background: #0963b4;
+        box-shadow: 0px 2px 5px #00000033;
+        border-radius: 2px;
+        color: #ffffff;
+        font-size: 18px;
+        text-decoration: none;
+        @include flex;
+    }
 }
 
 .id_table_area {
-    max-width: 510px;
     background: #ffffff;
     border-radius: 3px 6px 3px 3px;
     margin-bottom: 10px;
+    .id_table_icon {
+        margin-right: 5px;
+    }
     .id_table_box {
         padding: 15px 20px;
     }
@@ -109,12 +150,17 @@
             font-size: 12px;
         }
     }
+    .id_table_check {
+        text-align: center;
+    }
 }
 
 .id_list_area {
-    max-width: 510px;
     background: #ffffff;
     border-radius: 3px 6px 3px 3px;
+    .id_list_icon {
+        margin-right: 5px;
+    }
     .id_list_box {
         padding: 15px 20px;
     }
@@ -124,6 +170,7 @@
             font-size: 12px;
             color: #71092d;
             border-bottom: 1px solid #852c4b;
+            padding: 5px 0;
             @include flex-average;
         }
     }
@@ -159,11 +206,11 @@
     }
 }
 
-.id_chart_area{
+.id_chart_area {
     margin-bottom: 10px;
 }
 
-.id_chart_box{
+.id_chart_box {
     width: calc(100% / 3 - 7px);
     margin-right: 10px;
     &:last-child {
