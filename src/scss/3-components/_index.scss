@@ -1,12 +1,3 @@
-.id_hisharp {
-    font-size: 30px;
-}
-
-.id_ltd {
-    font-size: 10px;
-    display: block;
-}
-
 .id_title {
     font-size: 24px;
     text-align: center;
@@ -17,8 +8,13 @@
     padding-left: 10px;
 }
 
+.id_nav_icons {
+    margin-right: 20px;
+}
+
 .id_sidebar_link {
     border-bottom: 1px solid #ffffff;
+    color: #ffffff !important;
 }
 
 .sidebar-item.active > .sidebar-link,
@@ -33,6 +29,17 @@
 .id_nav_area {
     li {
         padding: 0 10px;
+    }
+    .id_nav_redlight {
+        width: 17px;
+        height: 17px;
+        display: block;
+        background: #ef0009;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        border-radius: 99em;
     }
 }
 
