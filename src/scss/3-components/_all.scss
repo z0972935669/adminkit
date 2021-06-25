@@ -5,6 +5,10 @@ li {
     list-style: none;
 }
 
+.all_bg {
+    background: transparent linear-gradient(180deg, #f2f6fa 0%, #fbfcfd 8%, #faf2f200 60%, #1b243e 97%, #1b243e 100%) 0% 0% no-repeat padding-box;
+}
+
 .all_video {
     background: #1b223a;
     border-radius: 5px;
